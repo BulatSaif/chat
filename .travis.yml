@@ -11,6 +11,9 @@ python:
 script: 
   - pwd
   # Integration testing
+  - mysql -u root
+  - mysql -u root -ppassword
+  - mysql -u root -pletmein
   - ./integration_test.sh
   # - python3 unit_tests.py
 
