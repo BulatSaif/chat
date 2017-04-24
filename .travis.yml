@@ -6,9 +6,9 @@ python:
   - "pypy-5.3.1"
 
 before_install:
-  - mysql -u root -e 'CREATE DATABASE kisschat'
-  - mysql -u root -e 'update mysql.user set password=PASSWORD("matreshka") where User='root';
-
+ # - mysql -u root -e 'CREATE DATABASE kisschat'
+ # - mysql -u root -e 'update mysql.user set password=PASSWORD("matreshka") where User='root';
+  - mysql -u root  -e 'CREATE USER 'kiss'@'localhost' IDENTIFIED BY "matreshka"; GRANT ALL PRIVILEGES ON * . * TO 'kiss'@'localhost';'
 # command to run tests
 script: 
   - pwd
