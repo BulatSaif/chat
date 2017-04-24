@@ -3,6 +3,8 @@
 # The integration tests for kisschat
 
 # Test a WebSocket using curl.
+kisschat -a 0.0.0.0 &
+sleep 3
 curl --include \
 --no-buffer \
 --header "Connection: Upgrade" \

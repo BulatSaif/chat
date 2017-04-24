@@ -11,7 +11,6 @@ python:
 script: 
   - pwd
   # Integration testing
-  - kisschat -a 0.0.0.0
   - ./integration_test.sh
   # - python3 unit_tests.py
 
