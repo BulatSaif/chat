@@ -12,7 +12,7 @@ script:
   - pwd
   # Integration testing
   - kisschat -a 0.0.0.0 &
-  - integration_test.sh
+  - ./integration_test.sh
   # - python3 unit_tests.py
 
 # command to install dependencies
