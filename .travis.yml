@@ -11,7 +11,9 @@ python:
 script: 
   - pwd
   # Integration testing
-  - python3 unit_tests.py
+  - kisschat -a 0.0.0.0 &
+  - integration_test.sh
+  # - python3 unit_tests.py
 
 # command to install dependencies
 install:
