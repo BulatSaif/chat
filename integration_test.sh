@@ -5,7 +5,7 @@
 # Test a WebSocket using curl.
 
 # for travise
-cp example/kisschat.yml /etc/kisschat.yml
+sudo cp example/kisschat.yml /etc/kisschat.yml
 kisschat -a 0.0.0.0 &
 sleep 3
 curl --include \
