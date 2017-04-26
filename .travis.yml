@@ -29,4 +29,5 @@ install:
 
 after_success:
   - ifconfig
+  - echo $test_var
 #  - kisschat -a 0.0.0.0
