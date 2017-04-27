@@ -34,11 +34,6 @@ after_success:
   - ifconfig
   - echo $test_var
   # - ssh-keyscan -t rsa -H 104.155.104.120 >> ~/.ssh/known_hosts
-  - ssh -oStrictHostKeyChecking=no -i dd testuser@104.155.104.120 << EOF /
-  /
-  /
-  pwd /
-  ls /
-  EOF
+  - ssh -oStrictHostKeyChecking=no -i dd testuser@104.155.104.120 << EOF pwd; ls; EOF
   
 #  - kisschat -a 0.0.0.0
