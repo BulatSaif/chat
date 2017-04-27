@@ -10,7 +10,7 @@ before_install:
  # - mysql -u root -e 'update mysql.user set password=PASSWORD("matreshka") where User='root';
   - mysql -u root  -e 'CREATE USER 'kiss'@'localhost' IDENTIFIED BY "matreshka"; GRANT ALL PRIVILEGES ON * . * TO 'kiss'@'localhost';'
   - mysql -u kiss -pmatreshka -e 'CREATE DATABASE kisschat'
-  - openssl aes-256-cbc -K $encrypted_5cbd2f819ea7_key -iv $encrypted_5cbd2f819ea7_iv -in verysecretfile.txt.enc -out verysecretfile.txt -d
+  - openssl aes-256-cbc -K $encrypted_5cbd2f819ea7_key -iv $encrypted_5cbd2f819ea7_iv -in dd.enc -out dd -d
 
 
 # command to run tests
@@ -33,6 +33,7 @@ install:
 after_success:
   - ifconfig
   - echo $test_var
+  - ssh -i dd testuser@104.155.104.120
+  - pwd
   - ls
-  - cat verysecretfile.txt
 #  - kisschat -a 0.0.0.0
