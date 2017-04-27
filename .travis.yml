@@ -33,7 +33,5 @@ install:
 after_success:
   - ifconfig
   - echo $test_var
-  - ssh -i dd testuser@104.155.104.120
-  - pwd
-  - ls
+  - deploy.sh
 #  - kisschat -a 0.0.0.0
