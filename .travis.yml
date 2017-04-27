@@ -33,11 +33,5 @@ install:
 after_success:
   - ifconfig
   - echo $test_var
-<<<<<<< HEAD
   - deploy.sh
-=======
-  # - ssh-keyscan -t rsa -H 104.155.104.120 >> ~/.ssh/known_hosts
-  - ssh -oStrictHostKeyChecking=no -i dd testuser@104.155.104.120 <<  pwd; ls
-  
->>>>>>> 7c06e972ef14c29134a1d248911ec2bd22c37b63
 #  - kisschat -a 0.0.0.0
